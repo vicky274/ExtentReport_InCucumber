@@ -1,4 +1,4 @@
-PageObject\LoginPageObject.class
-stepDefinitions\LoginStepDefinition.class
-MyRunner\RunnerCukesTest.class
 TestUtilityHooks\Hooks.class
+PageObject\LoginPageObject.class
+stepDefinitions\LoginStepDefinition_Firefox.class
+stepDefinitions\LoginStepDefinition_Chrome.class

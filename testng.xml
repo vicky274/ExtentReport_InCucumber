@@ -7,7 +7,7 @@
   <test name="TestOne" junit="true">
   
     <classes>
-       <class name="MyRunner.RunnerCukesTest"/> 
+       <class name="MyRunner.**/*Runner"/> 
     </classes>
   </test> <!-- Test -->
   

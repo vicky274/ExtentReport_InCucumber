@@ -1,5 +1,5 @@
-C:\Selenium_Workspace\Cucumber-Project\src\test\java\PageObject\LoginPageObject.java
-C:\Selenium_Workspace\Cucumber-Project\src\test\java\MyRunner\RunnerCukesTest.java
-C:\Selenium_Workspace\Cucumber-Project\src\test\java\TestAuto\LoginPageTest.java
-C:\Selenium_Workspace\Cucumber-Project\src\test\java\stepDefinitions\LoginStepDefinition.java
-C:\Selenium_Workspace\Cucumber-Project\src\test\java\TestUtilityHooks\Hooks.java
+C:\SeleniumWorkspace\CucumberProject_ExtentReport\src\test\java\PageObject\LoginPageObject.java
+C:\SeleniumWorkspace\CucumberProject_ExtentReport\src\test\java\stepDefinitions\LoginStepDefinition_Firefox.java
+C:\SeleniumWorkspace\CucumberProject_ExtentReport\src\test\java\MyRunner\TestRunner.java
+C:\SeleniumWorkspace\CucumberProject_ExtentReport\src\test\java\stepDefinitions\LoginStepDefinition_Chrome.java
+C:\SeleniumWorkspace\CucumberProject_ExtentReport\src\test\java\TestUtilityHooks\Hooks.java
