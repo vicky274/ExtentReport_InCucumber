@@ -257,30 +257,9 @@
 				<artifactId>maven-resources-plugin</artifactId>
 				<version>2.4</version>
 			</plugin>
-			
-<!-- Run as Maven test
-1)Include runner class file under include tag in surefire plugin/ or set in testng file and enable junit attribute to true
- and then set the filepath in surefire plugin under suitexmlfiles -->
- 
-			<!-- Use surefire code in pom_parallel file to run test runner in parallel mode -->
-			 <plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.21.0</version>
-				<configuration>
-				 <useSystemClassLoader>false</useSystemClassLoader>
-				 <testFailureIgnore>true</testFailureIgnore>
-				  <includes>
-                        <include>**/*TestRunner.java</include>
-                    </includes>
-					<!-- <suiteXmlFiles>
-						<suiteXmlFile>testng.xml</suiteXmlFile>
-					</suiteXmlFiles> -->
-				</configuration>
-			</plugin>  
-			 
-			 <!-- Running cucumber test in parallel -->
-		<!-- 	<plugin>
+	
+	<!-- Running cucumber test in parallel -->
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.21.0</version>
@@ -289,17 +268,17 @@
                  <reuseForks>true</reuseForks>
                  <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
 				 <testFailureIgnore>true</testFailureIgnore>
-				  <includes>
+				 <includes>
                         <include>**/*Runner.java</include>
                     </includes>
-                    <suiteXmlFiles>
-						<suiteXmlFile>testng.xml</suiteXmlFile>
-					</suiteXmlFiles>
                     <reportsDirectory>target/surefire-reports-${surefire.forkNumber}</reportsDirectory>
+					<!-- <suiteXmlFiles>
+						<suiteXmlFile>testng.xml</suiteXmlFile>
+					</suiteXmlFiles> -->
 				</configuration>
 			</plugin>
-			 -->
 			
+			 
 			<plugin>
 				<groupId>net.masterthought</groupId>
 				<artifactId>maven-cucumber-reporting</artifactId>
@@ -320,7 +299,7 @@
 							<skippedFails>true</skippedFails>
                             <enableFlashCharts>true</enableFlashCharts>
 							<buildNumber>1</buildNumber>
-							<parallelTesting>false</parallelTesting>
+							<parallelTesting>true</parallelTesting>
 						</configuration>
 					</execution>
 				</executions>

@@ -4,7 +4,7 @@
 
 <!-- to run junit in testng we need to include junit attribute to true -->
 
-  <test name="TestOne" junit="true">
+  <test name="TestAutomation" junit="true">
   
     <classes>
        <class name="MyRunner.**/*Runner"/> 

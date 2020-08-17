@@ -16,7 +16,8 @@ import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
 import gherkin.formatter.model.Scenario;
 
-
+/*"json:target/Cucumber-reports/CucumberTestReport.json",
+"rerun:target/Cucumber_maven_Report/cucumber-rerun/rerun.txt",*/
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features",
@@ -28,10 +29,8 @@ import gherkin.formatter.model.Scenario;
         plugin = {
                 "pretty",
                 "html:target/Cucumber_maven_Report/cucumber-pretty",
-                "json:target/Cucumber-reports/CucumberTestReport.json",
-                "rerun:target/Cucumber_maven_Report/cucumber-rerun/rerun.txt",
                 "com.cucumber.listener.ExtentCucumberFormatter:target/2/cucumber-reports/report.html"
         })
-public class TestRunner {
+public class SecondTestRunner {
    
 }

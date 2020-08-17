@@ -13,7 +13,8 @@ public class Hooks {
 
 	@Before(order=1)
 	public void beforeScenario(Scenario scenario) {
-	 Reporter.assignAuthor("Author - Vignesh");
+		
+	 System.out.println(scenario.getName());
 	
 	}
 	
