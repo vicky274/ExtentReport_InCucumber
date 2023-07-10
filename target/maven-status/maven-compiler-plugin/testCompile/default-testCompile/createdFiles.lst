@@ -1,6 +1,0 @@
-MyRunner\SecondTestRunner.class
-TestUtilityHooks\Hooks.class
-PageObject\LoginPageObject.class
-MyRunner\FirstTestRunner.class
-stepDefinitions\LoginStepDefinition_Firefox.class
-stepDefinitions\LoginStepDefinition_Chrome.class

@@ -3,14 +3,12 @@ package TestData;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.text.SimpleDateFormat;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 
-import org.apache.poi.ss.usermodel.CellType;
-import org.apache.poi.ss.usermodel.DateUtil;
-import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.*;
 
 
 enum Data{
@@ -22,7 +20,7 @@ public class RetreiveData {
 	private static XSSFWorkbook ExcelWBook;
 	private static XSSFCell Cell;
 	private static XSSFRow Row;
-	private static final String TEST_DATA_FOLDER="TestData";
+	private static final String TEST_DATA_FOLDER= "TestData";
 	
 	
 	
@@ -35,9 +33,9 @@ public class RetreiveData {
 	}
 	
 	
-	public static void SetExcelFile(String path,String sheetname){
+	public static void SetExcelFile(String ExcelName,String sheetname){
 		try {
-			FileInputStream ExcelFile = new FileInputStream(path);
+			FileInputStream ExcelFile = new FileInputStream(getpath(ExcelName));
 			ExcelWBook = new XSSFWorkbook(ExcelFile);
 			ExcelWSheet = ExcelWBook.getSheet(sheetname);
 		} catch (Exception e) {
@@ -60,10 +58,13 @@ public class RetreiveData {
 		}
  }
 	    
-	    public static Object[][] getCellData(String sheetname) throws Exception{
+	    public static Object[][] getCellData() throws Exception{
 			 Object[][] obj = null;
 			 try {
-				 
+				 CellStyle style;
+
+				 XSSFDataFormat XSSFDataFormat = ExcelWBook.getCreationHelper().createDataFormat();
+				 DataFormatter dataFormatter = new DataFormatter();
 				   // SetExcelFile(path, sheetname);
 					
 					int rowcount =ExcelWSheet.getLastRowNum()+1;
@@ -74,9 +75,7 @@ public class RetreiveData {
 					
 					int lastcellcount = Row.getLastCellNum();
 					System.out.println("Total number of Columns :"+lastcellcount);
-					
-					System.out.println(ExcelWSheet.getRow(22).getCell(1));
-					
+
 					obj=new Object[rowcount][lastcellcount];
 					
 					for(int i=0;i<rowcount;i++)
@@ -86,9 +85,7 @@ public class RetreiveData {
 						
 						for(int j=0;j<lastcellcount;j++)
 						{
-							
 							Cell =Row.getCell(j);
-							
 							if(Cell!=null)
 						{
 							switch(Cell.getCellType())   
@@ -98,9 +95,25 @@ public class RetreiveData {
 		                    	 System.out.println("String value :"+obj[i][j]);
 		                        break;
 		                    case NUMERIC:
-		                    	 Cell.setCellType(CellType.STRING);
-		                    	 obj[i][j]=Cell.getStringCellValue();
-		                    	 System.out.println("Number is :"+obj[i][j]);
+
+								DataFormat format = ExcelWBook.createDataFormat();
+								style = ExcelWBook.createCellStyle();
+
+								/*style.setDataFormat(format.getFormat("€ #.##0,0000000"));
+								//style.setDataFormat((short)7);
+								Cell.setCellStyle(style);*/
+
+								 style.setDataFormat((short)7);
+								 Cell.setCellStyle(style);
+		                    	 obj[i][j]=Cell.getNumericCellValue();
+
+								 DecimalFormat df = new DecimalFormat("#.##");
+								 df.setMaximumFractionDigits(7);
+								 String value = df.format(obj[i][j]).replaceAll("\\,", "\\.").trim();
+								System.out.println("Formatted Number is :"+value);
+								 System.out.println("Formatted Number is :"+Double.parseDouble(value)*5);
+
+
 		                        break;
 		                    case BLANK:
 		                    	obj[i][j]="";

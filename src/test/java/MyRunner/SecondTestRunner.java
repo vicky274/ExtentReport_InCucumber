@@ -3,18 +3,18 @@ package MyRunner;
 
 import java.io.File;
 
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
 import org.junit.AfterClass;
 import org.junit.runner.RunWith;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import com.cucumber.listener.Reporter;
-import cucumber.api.CucumberOptions;
+/*import com.cucumber.listener.Reporter;
 import cucumber.api.java.Before;
-import cucumber.api.junit.Cucumber;
 import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
-import gherkin.formatter.model.Scenario;
+import gherkin.formatter.model.Scenario;*/
 
 /*"json:target/Cucumber-reports/CucumberTestReport.json",
 "rerun:target/Cucumber_maven_Report/cucumber-rerun/rerun.txt",*/
@@ -22,10 +22,9 @@ import gherkin.formatter.model.Scenario;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = {"stepDefinitions","TestUtilityHooks"},
-        tags = {"~@ignored"},
+        tags = "@ignored",
         dryRun=false,
         monochrome=true,
-        strict=true,
         plugin = {
                 "pretty",
                 "html:target/Cucumber_maven_Report/cucumber-pretty",

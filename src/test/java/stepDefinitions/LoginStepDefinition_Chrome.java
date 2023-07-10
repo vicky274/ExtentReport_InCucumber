@@ -3,17 +3,15 @@ package stepDefinitions;
 import java.io.IOException;
 import java.util.Properties;
 
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 import ExtentManager.BrowserFactory;
 import ExtentManager.Propertyfile;
 import PageObject.LoginPageObject;
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+
 
 public class LoginStepDefinition_Chrome {
 
@@ -27,10 +25,10 @@ public class LoginStepDefinition_Chrome {
 	 public void chrome_user_is_on_Login_Page() throws Throwable {
 		 try {
 				BrowserFac = BrowserFactory.getinstance();
-				System.out.println(BrowserFac.getvalue("demo-url"));
+				System.out.println(BrowserFac.getDataFromConfigFile("demo-url"));
 				BrowserFac.setup();
 				this.driver = BrowserFac.getDriver();
-				driver.get(BrowserFac.getvalue("demo-url"));
+				driver.get(BrowserFac.getDataFromConfigFile("demo-url"));
 				LoginPageObject =new LoginPageObject(driver);
 			} catch (IOException e) {
 				e.printStackTrace();

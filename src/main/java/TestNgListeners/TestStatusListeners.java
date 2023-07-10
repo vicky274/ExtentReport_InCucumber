@@ -1,27 +1,15 @@
 package TestNgListeners;
 
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-
-import org.testng.ISuite;
-import org.testng.ISuiteListener;
-import org.testng.ITestContext;
-import org.testng.ITestListener;
-import org.testng.ITestNGListener;
-import org.testng.ITestResult;
-import org.testng.internal.annotations.IListeners;
-
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
+import ExtentManager.BrowserFactory;
+import ExtentReportListener.ExtentTestManager;
+import Utility.Capturescreenshot;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
-import com.aventstack.extentreports.markuputils.Markup;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
-import ExtentManager.BrowserFactory;
-import ExtentReportListener.ExtentReportManager;
-import ExtentReportListener.ExtentTestManager;
-import Utility.Capturescreenshot;
+import org.testng.*;
+
+import java.io.IOException;
 
 public class TestStatusListeners  implements ITestListener ,ISuiteListener{
 	

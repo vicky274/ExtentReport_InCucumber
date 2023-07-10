@@ -3,22 +3,17 @@ package MyRunner;
 
 import java.io.File;
 
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import com.cucumber.listener.Reporter;
-import cucumber.api.CucumberOptions;
-import cucumber.api.java.Before;
-import cucumber.api.junit.Cucumber;
-import cucumber.api.testng.AbstractTestNGCucumberTests;
-import cucumber.api.testng.CucumberFeatureWrapper;
-import cucumber.api.testng.TestNGCucumberRunner;
-import gherkin.formatter.model.Scenario;
 
 
 
+//"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features",
@@ -26,7 +21,6 @@ import gherkin.formatter.model.Scenario;
         tags = "~@ignored",
         dryRun=false,
         monochrome=true,
-        strict=true,
         plugin = {
                 "html:target/Cucumber_maven_Report/cucumber-pretty",
                 "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"

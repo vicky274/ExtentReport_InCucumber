@@ -7,14 +7,14 @@ import java.util.Map;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class ExtentTestManager {
 
 	private static Map<Long, ExtentTest> extentTestMap = new HashMap<Long, ExtentTest>();
 	private static ExtentReports extent = null;
-	private static ExtentHtmlReporter htmlreporter=null;
+	private static ExtentSparkReporter htmlreporter=null;
 	
 	public synchronized static  ExtentTest getTest() {
 		return (ExtentTest) extentTestMap.get(Thread.currentThread().getId());
@@ -31,12 +31,10 @@ public class ExtentTestManager {
 	}
 	
 	public synchronized static ExtentReports CreateInstance(){
-		  htmlreporter = new ExtentHtmlReporter(reportname());
+		  htmlreporter = new ExtentSparkReporter(reportname());
 		  htmlreporter.config().setDocumentTitle("Automation Report");
 		  htmlreporter.config().setReportName("Smoke_Report");
 		  htmlreporter.config().setTheme(Theme.DARK);
-		  htmlreporter.config().setAutoCreateRelativePathMedia(true);
-		  htmlreporter.start();
 		  extent = new ExtentReports();
 		  extent.attachReporter(htmlreporter);
 		  extent.setSystemInfo("Operating System", System.getProperty("os.name"));

@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -11,9 +12,11 @@ import java.util.Properties;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 /*How to create Singleton design pattern?
 To create the singleton class, we need to have static member of class, private constructor and static factory method.
@@ -51,7 +54,7 @@ public class BrowserFactory {
 
 	}
 	
-	public  String getvalue(String key){
+	public  String getDataFromConfigFile(String key){
 		
 		return hashmap.get(key);
 	}
@@ -66,16 +69,20 @@ public class BrowserFactory {
 	public void setup() throws IOException{
 	
 		try{
-		switch(getvalue("browser"))
+		switch(getDataFromConfigFile("browser"))
 		{
 		case "chrome":
-			service = new ChromeDriverService.Builder()
+			ChromeOptions option = new ChromeOptions();
+			option.addArguments("--remote-allow-origins=*");
+			driver.set(WebDriverManager.chromedriver().capabilities(option).create());
+			driver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.get().manage().window().maximize();
+			/*service = new ChromeDriverService.Builder()
 			.usingDriverExecutable(new File(getvalue("jarfile"))).usingAnyFreePort().withSilent(true).build();
 			service.start();
 			driver.set(new ChromeDriver(service));
 			driver.get().manage().window().maximize();
-			driver.get().manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
-			driver.get().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+			driver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));*/
 			
 		}
 	

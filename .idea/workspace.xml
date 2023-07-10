@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6fc83b21-9d5a-4a65-ab33-28702cc9b404" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/MyRunner/RunCucumberTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/PageObject/ApplicationLoginPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestUtilityHooks/BaseDriver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/ApplicationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/TestXray.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ExtentManager/BrowserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ExtentManager/BrowserFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ExtentReportListener/ExtentReportManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ExtentReportListener/ExtentReportManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ExtentReportListener/ExtentTestManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ExtentReportListener/ExtentTestManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TestData/RetreiveData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TestData/RetreiveData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TestNgListeners/TestStatusListeners.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TestNgListeners/TestStatusListeners.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MyRunner/FirstTestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MyRunner/FirstTestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MyRunner/SecondTestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MyRunner/SecondTestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestUtilityHooks/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestUtilityHooks/Hooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/LoginStepDefinition_Chrome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/LoginStepDefinition_Chrome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/LoginStepDefinition_Firefox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/LoginStepDefinition_Firefox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ExtentManager/Propertyfile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ExtentManager/Propertyfile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/TestData/TestDataFromExcel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TestData/TestDataFromExcel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/TestData/TestDataUtility.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TestData/TestDataUtility.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utility/Capturescreenshot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Utility/Capturescreenshot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/PageObject/LoginPageObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/PageObject/LoginPageObject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/TestUtilityHooks/Hooks.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestUtilityHooks/Hooks.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2S6sKdLbfOTWnMICzOtJkwVKA2c" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/velangov/Documents"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="RunCucumberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Cucumber-Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="MyRunner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="MyRunner" />
+      <option name="MAIN_CLASS_NAME" value="MyRunner.RunCucumberTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.RunCucumberTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6fc83b21-9d5a-4a65-ab33-28702cc9b404" name="Changes" comment="" />
+      <created>1688478301981</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1688478301981</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
