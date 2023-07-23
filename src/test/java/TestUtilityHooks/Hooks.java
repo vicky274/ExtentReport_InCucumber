@@ -8,7 +8,7 @@ import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeOptions;
-import stepDefinitions.ApplicationTest;
+import stepDefinitions.ApplicationStepDefinition;
 
 import java.io.IOException;
 import java.time.Duration;
