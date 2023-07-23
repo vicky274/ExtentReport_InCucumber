@@ -1,5 +1,5 @@
-@LoginTest
-Feature: This story is used to test the Application
+@REQ_AUT-29
+Feature: Story - XRay Jenkins Integration
 
   Background:
     Given user the access to the application
