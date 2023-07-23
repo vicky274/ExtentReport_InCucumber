@@ -10,12 +10,12 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = {"stepDefinitions","TestUtilityHooks"},
-        tags = "@DemoTest",
+        tags = "@Demo",
         //tags = "@RegressionTest or @SmokeTest",
         dryRun=false,
         monochrome=true,
         plugin = {"pretty", "html:target/cucumberHtmlReport.html",     //  for html result
-                "pretty:target/cucumber-json-report.json"   // for json result
+                "json:target/cucumber-report.json"   // for json result
          })
 public class RunCucumberTest {
 }

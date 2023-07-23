@@ -2,25 +2,17 @@ package stepDefinitions;
 
 import ExtentManager.BrowserFactory;
 import PageObject.ApplicationLoginPage;
-import PageObject.LoginPageObject;
 import TestData.RetreiveData;
-import TestUtilityHooks.BaseDriver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.SoftAssert;
 
 import java.io.IOException;
-import java.time.Duration;
 
 
-public class ApplicationTest  extends RetreiveData{
+public class ApplicationStepDefinition  extends RetreiveData{
     private static SoftAssert s;
     private WebDriver driver;
     private BrowserFactory BrowserFac;

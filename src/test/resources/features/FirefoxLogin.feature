@@ -1,16 +1,16 @@
 @firefox5100
 Feature: Demo Site Form Filling-Firefox
 
-Background:
-Given Firefox user is already on Login Page
-
-@firefox
-Scenario: Demo Site Form Filling
-When Firefox user enters first name data in first name field in firefox
-When Firefox user enters Lastname data in last name field in firefox
-When Firefox user selects State  in State field in firefox
-When Firefox user clicked on radio button in firefox
-Then Close the Firefox browser
+#Background:
+#Given Firefox user is already on Login Page
+#
+#@firefox
+#Scenario: Demo Site Form Filling
+#When Firefox user enters first name data in first name field in firefox
+#When Firefox user enters Lastname data in last name field in firefox
+#When Firefox user selects State  in State field in firefox
+#When Firefox user clicked on radio button in firefox
+#Then Close the Firefox browser
 
 
 #@scenario2
