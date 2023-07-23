@@ -103,7 +103,7 @@ public class ApplicationTest  extends RetreiveData{
     public void user_get_data_from_excel_sheet(String ExcelfileName) {
         try{
             RetreiveData.SetExcelFile(ExcelfileName,"Sheet1");
-            RetreiveData.getCellData();
+            RetreiveData.getCellData_Rate();
         }
         catch (Exception e){
             System.out.println(e.getMessage());
