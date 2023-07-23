@@ -20,6 +20,6 @@ Feature: Story - XRay Jenkins Integration
     Then test logged into application
     Then test quit the Chrome browser
 
-  @DemoTest
+  @Demo
   Scenario: Third Scenario to fetch data from Excel
     When user get data from Excel sheet "Tariff.xlsx"
