@@ -20,14 +20,14 @@ public class ApplicationStepDefinition  extends RetreiveData{
 
     @Given("user the access to the application")
     public void user_the_access_to_the_application() throws IOException {
-       /* BrowserFac = BrowserFactory.getinstance();
+        BrowserFac = BrowserFactory.getinstance();
         BrowserFac.setup();
         this.driver = BrowserFac.getDriver();
 
         ApplicationLoginPage = new ApplicationLoginPage(driver);
 
         System.out.println(BrowserFac.getDataFromConfigFile("url"));
-        driver.get(BrowserFac.getDataFromConfigFile("url"));*/
+        driver.get(BrowserFac.getDataFromConfigFile("url"));
         //new WebDriverWait(driver, Duration.ofSeconds(20)).until(ExpectedConditions.elementToBeClickable(ApplicationLoginPage.Accept_All)).click();
     }
 
