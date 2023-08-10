@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = {"stepDefinitions","TestUtilityHooks"},
-        tags = "@SmokeTest",
+        tags = "@RegressionTest",
         //tags = "@RegressionTest or @SmokeTest",
         dryRun=false,
         monochrome=true,
