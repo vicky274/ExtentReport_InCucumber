@@ -4,7 +4,7 @@ Feature: Story - XRay Jenkins Integration
   Background:
     Given user the access to the application
 
-  @SmokeTest
+  @RegressionTest
   Scenario: First Scenario to validate the application
     When vicky enters the username
     When vicky enters the password
@@ -20,6 +20,6 @@ Feature: Story - XRay Jenkins Integration
     Then test logged into application
     Then test quit the Chrome browser
 
-  @Demo
+  @RegressionTest
   Scenario: Third Scenario to fetch data from Excel
     When user get data from Excel sheet "Tariff.xlsx"
